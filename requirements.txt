@@ -2,3 +2,7 @@ pandas
 numpy 
 sklearn
 matplotlib
+wordcloud
+seaborn
+scipy
+nltk
