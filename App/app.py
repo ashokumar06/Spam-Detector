@@ -5,10 +5,16 @@ import re
 import spacy
 from nltk.stem import PorterStemmer
 from nltk.corpus import stopwords
-import spacy.cli
-spacy.cli.download("en_core_web_sm")
 import spacy
-nlp = spacy.load("en_core_web_sm")
+import os
+import spacy.cli
+
+# Check if the model is installed; if not, install it.
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    spacy.cli.download("en_core_web_sm")  # Download the model
+    nlp = spacy.load("en_core_web_sm")  # Load the model after installation
 
 # Load spaCy model
 nlp = spacy.load("en_core_web_sm")
