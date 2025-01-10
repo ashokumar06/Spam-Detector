@@ -61,7 +61,7 @@ if st.button("Predict"):
     else:
         st.warning("Please enter some text to classify.")
 
-# Button at Bottom Center
+
 st.markdown(
     """
     <style>
@@ -72,13 +72,21 @@ st.markdown(
         bottom: 20px;
         width: 100%;
     }
-    .button-container button {
+    .button-container a {
         font-size: 18px;
         padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+    .button-container a:hover {
+        background-color: #45a049;
     }
     </style>
     <div class="button-container">
-        <button onclick="window.location.href='https://ashok-prajapati2.github.io/Portfolio/';">About Me</button>
+        <a href="https://ashok-prajapati2.github.io/Portfolio/" target="_blank">About Me</a>
     </div>
     """,
     unsafe_allow_html=True,
