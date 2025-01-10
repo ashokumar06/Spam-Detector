@@ -5,6 +5,10 @@ import re
 import spacy
 from nltk.stem import PorterStemmer
 from nltk.corpus import stopwords
+import spacy.cli
+spacy.cli.download("en_core_web_sm")
+import spacy
+nlp = spacy.load("en_core_web_sm")
 
 # Load spaCy model
 nlp = spacy.load("en_core_web_sm")
