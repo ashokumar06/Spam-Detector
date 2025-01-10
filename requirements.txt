@@ -1,6 +1,8 @@
 pandas
 numpy 
-sklearn
+pandas
+numpy
+scikit-learn
 matplotlib
 wordcloud
 seaborn
