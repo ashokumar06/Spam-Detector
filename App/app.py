@@ -4,27 +4,27 @@ import string
 import re
 import spacy
 from nltk.stem import PorterStemmer
-from nltk.corpus import stopwords
-import spacy
-import os
-import spacy.cli
 
-# Check if the model is installed; if not, install it.
+# Check and load spaCy model
 try:
     nlp = spacy.load("en_core_web_sm")
 except OSError:
+    import spacy.cli
     pass
-    # spacy.cli.download("en_core_web_sm")  # Download the model
-    # nlp = spacy.load("en_core_web_sm")  # Load the model after installation
+    # spacy.cli.download("en_core_web_sm")
+    # nlp = spacy.load("en_core_web_sm")
 
-# Load spaCy model
-nlp = spacy.load("en_core_web_sm")
+# Initialize stemmer and stopwords
 stemmer = PorterStemmer()
 stopwords_set = nlp.Defaults.stop_words  # spaCy's default stopwords
 
 # Load pre-trained TfidfVectorizer and model
-tfidf = pickle.load(open('vectorizer.pkl', 'rb'))
-model = pickle.load(open('mnb_model.pkl', 'rb'))
+try:
+    tfidf = pickle.load(open('vectorizer.pkl', 'rb'))
+    model = pickle.load(open('mnb_model.pkl', 'rb'))
+except FileNotFoundError as e:
+    st.error("Required model files not found. Please ensure 'vectorizer.pkl' and 'mnb_model.pkl' are available.")
+    st.stop()
 
 # Text preprocessing function
 def transform_text(text):
@@ -40,26 +40,26 @@ def transform_text(text):
 # Streamlit app
 st.title("Spam Classifier")
 
+# Input text field
 input_sms = st.text_input("Enter your text")
 
+# Prediction logic
 if st.button("Predict"):
-    # Preprocess the input
-    transformed_sms = transform_text(input_sms)
-    try:
-        vector_input = tfidf.transform([transformed_sms])
-    except ValueError as e:
-        st.error("An error occurred during vectorization: " + str(e))
-        st.stop()
-    result = model.predict(vector_input)[0]
+    if input_sms.strip():
+        transformed_sms = transform_text(input_sms)
+        try:
+            vector_input = tfidf.transform([transformed_sms])
+            result = model.predict(vector_input)[0]
 
-    # Display the result
-    if result == 0:
-        st.header("The message is classified as Not Spam.")
+            # Display the result
+            if result == 0:
+                st.header("The message is classified as Not Spam.")
+            else:
+                st.header("The message is classified as Spam.")
+        except Exception as e:
+            st.error("An error occurred during prediction: " + str(e))
     else:
-        st.header("The message is classified as Spam.")
-
-
-
+        st.warning("Please enter some text to classify.")
 
 # Button at Bottom Center
 st.markdown(
