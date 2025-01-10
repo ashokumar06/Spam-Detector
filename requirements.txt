@@ -9,3 +9,4 @@ seaborn
 scipy
 nltk
 nbimporter
+spacy
