@@ -6,3 +6,4 @@ wordcloud
 seaborn
 scipy
 nltk
+nbimporter
