@@ -58,45 +58,8 @@ if st.button("Predict"):
     else:
         st.header("The message is classified as Spam.")
 
-import streamlit as st
 
-# Set page configuration
-st.set_page_config(
-    page_title="Ashok Kumar's Profile",
-    page_icon="👨‍💻",
-    layout="centered",
-)
 
-# Profile Information
-st.title("Ashok Kumar's Profile 👨‍💻")
-st.image("https://via.placeholder.com/150", caption="Your Profile Picture")  # Replace with your profile picture URL
-st.write("**Location:** Bangalore, India")
-st.write("**Education:** B.Tech in AI and Data Science (3rd Year)")
-st.write("**Current CGPA:** 8.60")
-st.write("**Interests:** Data Science, Machine Learning, Network Security, Ethical Hacking, Deep Learning")
-
-# Skills
-st.subheader("Technical Skills")
-skills = [
-    "Programming: Python, C++",
-    "Web Development: Django, Flask, Frontend (HTML, CSS, JavaScript)",
-    "Data Tools: SQL, MySQL, MongoDB, AWS",
-    "Machine Learning: OpenCV, TensorFlow, NumPy, Pandas",
-]
-st.write("\n".join([f"- {skill}" for skill in skills]))
-
-# Projects
-st.subheader("Projects")
-st.write("- **Road Lane Line Detection**: Using Python, OpenCV, NumPy, and TensorFlow.")
-st.write("- **News Summarizer**: Backend with Flask, Python, MongoDB, and LLMs.")
-st.write("- **Heart Health Prediction**: Developed with Django.")
-st.write("- **E-commerce Website**: Built using Django.")
-
-# Hobbies
-st.subheader("Hobbies")
-st.write("- Watching cartoons 🎥")
-st.write("- Reading books 📚 (Favorite: Swami Vivekananda)")
-st.write("- Exploring artwork 🎨")
 
 # Button at Bottom Center
 st.markdown(
