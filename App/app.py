@@ -46,3 +46,6 @@ if st.button("Predict"):
         st.header("The message is classified as Not Spam.")
     else:
         st.header("The message is classified as Spam.")
+
+if __name__ == "__main__":
+  st.run()
