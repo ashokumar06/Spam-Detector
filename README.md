@@ -1,8 +1,4 @@
 # Spam-Classifier
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)[![forthebadge](https://forthebadge.com/images/badges/its-not-a-lie-if-you-believe-it.svg)](https://forthebadge.com)
-[![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com)
-
 <p align="center">
   <a href="https://github.com/Ashok-Prajapati2/Spam-Detector">
     <img src="https://avatars.githubusercontent.com/u/85332573?s=400&u=2996e7685ff1bbb144c6442aea649c32b82381e4&v=4" alt="Logo">
@@ -28,9 +24,6 @@ It is implemented using LSTM and Word Embeddings to gain accuracy of 97.84%.
 
 ## 🏁 Datasets Used:-
 * The dataset used is SMS Spam Dataset created by UCI Machine Learning.This dataset is downloaded in kaggle.You can download it [here](https://www.kaggle.com/uciml/sms-spam-collection-dataset/download).
-* Reference for this dataset can be found [here](http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/)
-## 📧Contact:-
-For any kind of suggesstions/ help in models code Please mail me at ksdkamesh99@gmail.com.
 
-## 📜 LICENSE
-[MIT](https://github.com/ksdkamesh99/Spam-Classifier/blob/master/LICENSE)
+## 📧Contact:-
+For any kind of suggesstions/ help in models code Please tell me.
