@@ -1,3 +1,8 @@
 nltk_env
 nltk_data
 .ipynb*
+venv/
+.venv/
+settings.json
+*.pyc
+__pycache__/
