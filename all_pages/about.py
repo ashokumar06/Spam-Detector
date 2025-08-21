@@ -251,7 +251,7 @@ def show_page():
             <p><strong>Name:</strong> [Your Name]<br>
             <strong>Institution:</strong> [Your College]<br>
             <strong>Course:</strong> [Your Course]<br>
-            <strong>Email:</strong> <a href="mailto:your-email@example.com">your-email@example.com</a><br>
+            <strong>Email:</strong> <a href="mailto:your-email@example.com">ashokumar06@gmail.com<a><br>
             <strong>Portfolio:</strong> <a href="https://ashokumar.in" target="_blank">ashokumar.in</a></p>
         </div>
         """, unsafe_allow_html=True)

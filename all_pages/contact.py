@@ -22,15 +22,14 @@ def show_page():
             <h4>👨‍💻 Developer Information</h4>
             <p><strong>Name:</strong> Ashok Kumar<br>
             <strong>Role:</strong> ML Engineer & Student<br>
-            <strong>Institution:</strong> [Your College Name]<br>
-            <strong>Course:</strong> [Your Course/Degree]<br>
-            <strong>Year:</strong> [Your Year]</p>
+            <strong>Institution:</strong> ECB <br>
+            <strong>Course:</strong> AI DS </p>
             
             <h5>📱 Contact Details</h5>
             <p><strong>Email:</strong> <a href="mailto:contact@ashokumar.in">contact@ashokumar.in</a><br>
             <strong>Website:</strong> <a href="https://ashokumar.in" target="_blank">ashokumar.in</a><br>
-            <strong>LinkedIn:</strong> <a href="#" target="_blank">linkedin.com/in/yourprofile</a><br>
-            <strong>GitHub:</strong> <a href="#" target="_blank">github.com/yourusername</a></p>
+            <strong>LinkedIn:</strong> <a href="#" target="_blank">linkedin.com/in/ashokkumar</a><br>
+            <strong>GitHub:</strong> <a href="#" target="_blank">github.com/ashokkumar06</a></p>
         </div>
         """, unsafe_allow_html=True)
     
